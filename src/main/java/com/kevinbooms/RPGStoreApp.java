@@ -22,8 +22,7 @@ public class RPGStoreApp {
         dataSource.setUrl("jdbc:postgresql://localhost:5432/RPGStore");
     // No credentials are supplied in the Connection String above
     // Set connection credentials
-        dataSource.setUsername("postgres");
-        dataSource.setPassword("postgres1");
+
     // WARNING: Do not store plain text passwords in code
 
     // With a Database connection established we need to create a JDBC Template
