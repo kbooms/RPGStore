@@ -1,6 +1,7 @@
 package com.kevinbooms;
 
 // dependencies added in pom.xml
+import com.kevinbooms.model.Item;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -41,7 +42,7 @@ public class RPGStoreApp {
     */
         // Select all POTIONs from items table
         String sql = "SELECT item_id, item_name, item_type, price, description FROM items " +
-                    "WHERE item_type = 'POTION';";
+                    "WHERE item_type = 'TOOL';";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
     // results variable returns a SQL Row Set of data parsed by the JDBC Template with the queryForRowSet method
     // using the sql String statement as it's query parameter
@@ -49,6 +50,18 @@ public class RPGStoreApp {
     // using .next() in a while loop will iterate over every row returned in the set until .next() does not find a new row
     // to iterate over
         while (results.next()) {
+//            private Book mapRowToBook(SqlRowSet results) {
+//                Book book = new Book();
+//                book.setBookId(results.getInt("book_id"));
+//                book.setTitle(results.getString("title"));
+//                book.setAuthorId(results.getInt("author_id"));
+//                book.setPrice(results.getBigDecimal("price"));
+//                if (results.getDate("publish_date") != null) {
+//                    book.setPublishDate(results.getDate("publish_date").toLocalDate());
+//                }
+//                book.setOutOfPrint(results.getBoolean("out_of_print"));
+//                return book;
+//            }
     // this is a simple example of mapping columns to variables
             int itemId = results.getInt("item_id");
             String itemName = results.getString("item_name");
