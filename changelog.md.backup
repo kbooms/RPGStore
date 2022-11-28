@@ -4,7 +4,7 @@ Reestablished the database. Something got corrupted in the transfer of this proj
 
 - Database: 'items' table seems to be missing "Description" column in the actual database, but information is being pulled through somehow. Maybe I need to refresh it. Also a 'sales' table is still needed
 - Client: Write a terminal application for the Database with REST Template so the database can be manipulated. This will work for now until I can implement a GUI, which I'd like to build with React.
-- Server: Will need Models and DAO for 'items', 'customers', and 'sales'. When those are established, a REST controller can be built for public use.
+- Server: Will need Models and DAO for 'items', 'customers', and 'sales'. When those are established, a REST 
 
 
 [ 11/4/22 ] Updates and Progress

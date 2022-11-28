@@ -50,18 +50,6 @@ public class RPGStoreApp {
     // using .next() in a while loop will iterate over every row returned in the set until .next() does not find a new row
     // to iterate over
         while (results.next()) {
-//            private Book mapRowToBook(SqlRowSet results) {
-//                Book book = new Book();
-//                book.setBookId(results.getInt("book_id"));
-//                book.setTitle(results.getString("title"));
-//                book.setAuthorId(results.getInt("author_id"));
-//                book.setPrice(results.getBigDecimal("price"));
-//                if (results.getDate("publish_date") != null) {
-//                    book.setPublishDate(results.getDate("publish_date").toLocalDate());
-//                }
-//                book.setOutOfPrint(results.getBoolean("out_of_print"));
-//                return book;
-//            }
     // this is a simple example of mapping columns to variables
             int itemId = results.getInt("item_id");
             String itemName = results.getString("item_name");
@@ -72,6 +60,6 @@ public class RPGStoreApp {
             System.out.println("Item {" + "id: " + itemId + ", name: " + itemName + ", type: "  + itemType
                                 + ", price: " + itemPrice + ", description: " + description + "}");
         }
-
+    // as we go on we will have mapping methods within a DAO class
     }
 }
