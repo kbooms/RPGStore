@@ -8,6 +8,19 @@ public class Item {
     private int itemPrice;
     private String description;
 
+    public Item() {
+        // implemented a default constructor
+    }
+
+    public Item(int itemId, String itemName, String itemType, int itemPrice, String description) {
+        this.itemId = itemId;
+        this.itemName = itemName;
+        this.itemType = itemType;
+        this.itemPrice = itemPrice;
+        this.description = description;
+        // loaded constructor to handle creation of model objects
+    }
+
     public int getItemId() {
         return itemId;
     }
